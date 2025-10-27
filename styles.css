@@ -9,7 +9,7 @@
 body {
     overflow-x: hidden;
     /*background-color: #000;*/
-    background-image: linear-gradient(to bottom, #000000, #000, #FDCC0D);
+    background-image: linear-gradient(to bottom, #000000, #000000, #FDCC0D);
     display: flex;
     flex-direction: column;
     justify-content: center;
