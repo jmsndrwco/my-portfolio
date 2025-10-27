@@ -119,7 +119,10 @@ h1 {
     color: white;
     background: transparent;
 }
-
+.cta-cards a:hover {
+  text-decoration: none; /* Removes the underline on hover */
+  color: inherit; /* Keeps the link color the same as its parent text color on hover */
+}
 .cta a:hover {
     background: white;
     color: black;
