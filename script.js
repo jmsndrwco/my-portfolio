@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Banner Intro Animation
     setTimeout(() => {
         const { bannerIntro } = elements;
-        bannerIntro.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("assets/background.svg")';
+        bannerIntro.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("background.svg")';
         bannerIntro.style.backgroundRepeat = 'no-repeat';
         bannerIntro.style.backgroundSize = 'cover';
         bannerIntro.style.backgroundPosition = 'center';
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const { section: aboutSection, headlines, profilePic, bodyText } = elements.about;
                         [aboutSection, headlines, profilePic, bodyText].forEach(el => el.classList.add("visible"));
                         setTimeout(() => {
-                            aboutSection.style.backgroundImage = 'url("assets/background-right.svg")';
+                            aboutSection.style.backgroundImage = 'url("background-right.svg")';
                         }, 1000);
                         break;
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         [codingSection, codingHeadlines, codingContainer].forEach(el => el.classList.add("visible"));
                         setTimeout(() => {
                             if (codingSection) {
-                                codingSection.style.backgroundImage = 'url("assets/background-right.svg")';
+                                codingSection.style.backgroundImage = 'url("background-right.svg")';
                                 codingSection.style.backgroundRepeat = "no-repeat";
                             }
                         }, 3000);
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         });
                         setTimeout(() => {
                             if (contactSection) {
-                                contactSection.style.backgroundImage = 'url("assets/background.svg")';
+                                contactSection.style.backgroundImage = 'url("background.svg")';
                                 contactSection.style.backgroundRepeat = "no-repeat";
                             }
                         }, 3000);
