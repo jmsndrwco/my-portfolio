@@ -3,7 +3,7 @@ document.querySelector('.headline').addEventListener('animationend', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Elementos DOM
+
     const elements = {
         bannerIntro: document.querySelector(".banner-intro"),
         about: {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Banner Intro Animation
+
     setTimeout(() => {
         const { bannerIntro } = elements;
         bannerIntro.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("background.svg")';
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bannerIntro.style.opacity = "1";
     }, 6000);
 
-    // Smooth scroll para about section
+   
     document.querySelector('a[href="#about"]').addEventListener('click', event => {
         if (window.innerWidth > 768) {
             event.preventDefault();
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Intersection Observer setup
+
     const observerCallback = (entries, section) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Crear y configurar observers
+  
     const createObserver = (threshold, section) => {
         return new IntersectionObserver(
             (entries) => observerCallback(entries, section),
@@ -104,13 +104,13 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     };
 
-    // Inicializar observers
+
     const aboutObserver = createObserver(0.3, 'about');
     const projectsObserver = createObserver(0.1, 'projects');
     const codingObserver = createObserver(0.1, 'coding');
     const contactObserver = createObserver(0.3, 'contact');
 
-    // Observar elementos
+   
     aboutObserver.observe(elements.about.section);
     projectsObserver.observe(elements.projects.section);
     codingObserver.observe(elements.coding.section);
