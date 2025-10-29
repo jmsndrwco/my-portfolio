@@ -362,7 +362,7 @@ h1 {
 
 .project {
     text-align: center;
-    background: #f4f4f400;
+    /*background: #f4f4f400;*/
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #333;
