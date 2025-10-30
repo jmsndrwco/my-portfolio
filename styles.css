@@ -405,9 +405,9 @@ h1 {
     transform: translateY(0);
 }
 
-/*------------MY seetya PROJECTS-------------------*/
+/*------------MY coding PROJECTS-------------------*/
 
-.seetya {
+.coding {
     box-sizing: border-box;
     width: 100vw;
     min-height: 100vh;
@@ -427,7 +427,7 @@ h1 {
     transition: background 4s ease-in-out;
 }
 
-.seetya-headlines {
+.coding-headlines {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -438,13 +438,13 @@ h1 {
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.seetya-headlines h2 {
+.coding-headlines h2 {
     text-transform: uppercase;
     font-size: 26px;
     font-weight: 800;
 }
 
-.seetya-projects-container {
+.coding-projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -455,7 +455,7 @@ h1 {
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.seetya-project {
+.coding-project {
     text-align: center;
     background: #f4f4f4;
     padding: 10px;
@@ -465,37 +465,37 @@ h1 {
     cursor: pointer;
 }
 
-.seetya-project:hover {
+.coding-project:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.seetya-project img {
+.coding-project img {
     max-width: 100%;
 }
 
-.seetya-project p {
+.coding-project p {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
     font-weight: 500;
 }
 
-.seetya-project p:hover {
+.coding-project p:hover {
     color: rgb(230, 48, 48);
 }
 
-.seetya.visible {
+.coding.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.seetya-headlines.visible {
+.coding-headlines.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.seetya-projects-container.visible {
+.coding-projects-container.visible {
     opacity: 1;
     transform: translateY(0);
 }
