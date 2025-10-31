@@ -217,67 +217,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
 <!-- noscript fallback -->
 <noscript><div>jamesandrewcruz1998 [at] proton [dot] me</div></noscript>
     <script src="script.js"></script>
-    <script>
-/* ======= SAFE CLIENT PATCHES ======= */
-
-// 1️⃣  Suppress server-only import warning
-if (typeof window !== "undefined") {
-  console.warn = (function (orig) {
-    return function (msg, ...args) {
-      if (
-        typeof msg === "string" &&
-        (msg.includes("markdownToSafeHTML") ||
-         msg.includes("should not be imported on the client side"))
-      ) {
-        // Ignore that warning silently
-        return;
-      }
-      orig.apply(console, [msg, ...args]);
-    };
-  })(console.warn);
-}
-
-// 2️⃣  Zustand deprecation reminder
-console.info(
-  "%c[Zustand] Use createWithEqualityFn from 'zustand/traditional' in your stores.",
-  "color:#ffb100"
-);
-
-// 3️⃣  react-i18next notice (temporary fix)
-if (!window.i18nInitNotified) {
-  console.info(
-    "%c[i18next] Remember to initReactI18next in your i18n.ts and wrap your app with <I18nextProvider>.",
-    "color:#00b3ff"
-  );
-  window.i18nInitNotified = true;
-}
-
-// 4️⃣  Feature flag message (optional)
-const quickAvailabilityEnabled =
-  (window.ENV && window.ENV.QUICK_AVAILABILITY === "true") ||
-  false;
-console.log(
-  "QuickAvailabilityCheck feature enabled:",
-  quickAvailabilityEnabled
-);
-
-// Optional: globally silence repeated noisy warnings
-const ignoredWarnings = [
-  "deprecated",
-  "i18n instance",
-  "should not be imported on the client side",
-];
-const originalWarn = console.warn;
-console.warn = function (...args) {
-  if (
-    args.some((a) =>
-      ignoredWarnings.some((kw) => typeof a === "string" && a.includes(kw))
-    )
-  )
-    return;
-  originalWarn.apply(console, args);
-};
-</script>
+    
     
     
 </body>
